@@ -1,5 +1,6 @@
 package org.shyu.springboot.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -9,7 +10,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="ticket")
-public class Ticket {
+public class Ticket implements Serializable {
+	private static final long serialVersionUID = -5266747964593930327L;
+
 	@Id
 	@Column(name="ticket_id")
 	private int ticketId;
